@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ninja Gold</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+    <!-- <div id="header"> Your Ninja Gold {{gold}} </div> -->
+    <h2>Your Ninja Gold</h2>
+    <form action="/process_money" method="post">
+        <h3>Farm</h3>
+        <p>earns 10-20 pieces of gold</p>
+        <input type="hidden" name="building" value="farm" />
+        <input type="submit" value="Find Gold!" />
+    </form>
+    <form action="/process_money" method="post">
+        <h3>Cave</h3>
+        <p>earns 5-10 pieces of gold</p>
+        <input type="hidden" name="building" value="cave" />
+        <input type="submit" value="Find Gold!" />
+    </form>
+    <form action="/process_money" method="post">
+        <h3>House</h3>
+        <p>earns 2-5 pieces of gold</p>
+        <input type="hidden" name="building" value="house" />
+        <input type="submit" value="Find Gold!" />
+    </form>
+    <form action="/process_money" method="post">
+        <h3>Casino</h3>
+        <p>earns/takes 0-50 pieces of gold</p>
+        <input type="hidden" name="building" value="casino" />
+        <input type="submit" value="Find Gold!" />
+    </form>
+    <h1>Activities</h1>
+    <div id="activity">
+        {{activity|safe}}
+    </div>
+    <div id="reset_button">
+        <form action='/reset'>
+            <input type="submit" name="" value="reset">
+        </form>
+    </div>
+</body>
+
+</html>

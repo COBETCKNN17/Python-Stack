@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Dojo Survey</title>
+	<meta name="description" content="CONTENT">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	 crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/Users/boldgoldman/Documents/Developer Files/Coding Dojo/Python_Stack/flask_fundamentals/Dojo Fruit Store/style/style.css">
+</head>
+
+<body>
+	<div class="navbar">
+		<h3>Thank you for your order!</h3>
+		<p>We ordered {{item_quantity}} items for you and charged your student account {{student_id}} on {{created_date}}</p>
+		<h4>You've ordered:</h4>
+		<table>
+			<tr>
+				<td>Fruit Name</td>
+				<td>Quantity</td>
+			</tr>
+			<tr>
+				<th>Strawberry</th>
+				<th>{{r_quantity}}</th>
+			</tr>
+			<tr>
+				<th>Rasberry</th>
+				<th>{{s_quantity}}</th>
+			</tr>
+			<tr>
+				<th>Blueberry</th>
+				<th>{{b_quantity}}</th>
+			</tr>
+			<tr>
+		</table>
+		<p>Your Information</p>
+		<p>Name: {{name}}</p>
+		<p>Student ID: {{student_id}}</p>
+		<form action='/result' method='post'>
+
+		</form>
+	</div>
+
+</body>
+
+</html>

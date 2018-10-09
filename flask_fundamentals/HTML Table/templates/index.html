@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML Table</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
+	
+	<style>
+		#wrapper {
+			text-align: center;
+			width: 1000px;
+			height: 500px;
+			background-color: #fdcc52;
+			margin: 200px 200px 200px 200px;
+		}
+	
+		table {
+			margin-left: 290px;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+	
+		table tr td {
+			width: 140px;
+			height: 50px;
+			border: 1px solid black;
+		}
+	
+		h2 {
+			color: maroon;
+			margin-left: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" id="wrapper">
+		<h2>HTML Table</h2>
+		<table>
+			<tr>
+				<td><h3>First Name</h3></td>
+				<td><h3>Last Name</h3></td>
+				<td><h3>Age</h3></td>
+			</tr>				
+			{% for i in range(length)%}
+			<tr>
+				<td>{{users[i].first_name}}</td> 
+				<td>{{users[i].last_name}}</td> 
+				<td>{{users[i].age}}</td> 
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</body>
+
+</html>

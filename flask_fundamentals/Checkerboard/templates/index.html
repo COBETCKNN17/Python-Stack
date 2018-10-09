@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Checkerboard</title>
+	<style>
+		#wrapper {
+			text-align: center;
+			width: 700px; 
+			margin: 200px 200px 200px 200px;
+		}
+		table {
+			margin-left: 285px;
+		}
+		table tr td {
+			width: 50px;
+			height: 50px;
+		}
+		h2 {
+			color: maroon;
+			margin-left: 40px;
+		} 
+		.color2{
+			background-color: red;
+		}
+		.color1{
+			background-color: black;
+		}
+		</style>
+</head>
+<body>
+	<div id="wrapper">
+		<h2>Checkerboard</h2>
+		<table> 
+		{% for i in range(rows): %}
+			<tr>
+				{% for j in range(columns): %}
+				<td class='color{{ (i+j)%2+1 }}'></td>
+				{% endfor %}
+			</tr>
+		{% endfor %}
+		</table>
+
+		<!-- <table> Original Table
+				{% for i in range(4): %}
+					<tr>
+						{% for i in range(4): %}
+						<td class='color1'></td>
+						<td class='color2'></td>
+						{% endfor %}
+					</tr>
+					<tr>
+						{% for i in range(4): %}
+						<td class='color2'></td>
+						<td class='color1'></td>
+						{% endfor %}
+						</tr>
+				{% endfor %}
+		</table> -->
+	</div>
+</body>
+
+</html>

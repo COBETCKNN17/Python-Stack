@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dojo Fruit Store</title>
+    <meta name="description" content="CONTENT">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Users/boldgoldman/Documents/Developer Files/Coding Dojo/Python_Stack/flask_fundamentals/Dojo Fruit Store/style/style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h3 class="display-1">What would you like to buy?</h3>
+        <form action='/purchase' method='post'>
+            <table class="table">
+                <tr>
+                    <th scope="col">Fruit Name</td>
+                    <th scope="col">Quantity</td>
+                </tr>
+                <tr>
+                    <th>Strawberry</th>
+                    <th><select name="s_quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></th>
+                </tr>
+                <tr>
+                    <th>Rasberry</th>
+                    <th><select name="r_quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></th>
+                </tr>
+                <tr>
+                    <th>Blueberry</th>
+                    <th><select name="b_quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select></th>
+                </tr>
+                <tr>
+            </table>
+            <div class="col-sm-3">
+                Your Information<br>
+                Name: <input type="text" name="name"><br>
+                Student ID: <input type="text" name="student_id"><br>
+                <br><br>
+                Comment (optional):
+                <textarea name="description"></textarea><br>
+                <input type='submit' value='Buy me stuff'>
+            </div>
+            
+        </form>
+
+    </div>
+</body>
+
+</html>
